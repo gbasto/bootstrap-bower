@@ -2,7 +2,7 @@
  * angular-ui-bootstrap
  * http://angular-ui.github.io/bootstrap/
 
- * Version: 0.13.4 - 2015-08-10
+ * Version: 0.13.4 - 2015-08-17
  * License: MIT
  */
 angular.module("ui.bootstrap", ["ui.bootstrap.tpls", "ui.bootstrap.collapse","ui.bootstrap.accordion","ui.bootstrap.alert","ui.bootstrap.bindHtml","ui.bootstrap.buttons","ui.bootstrap.carousel","ui.bootstrap.dateparser","ui.bootstrap.position","ui.bootstrap.datepicker","ui.bootstrap.dropdown","ui.bootstrap.modal","ui.bootstrap.pagination","ui.bootstrap.tooltip","ui.bootstrap.popover","ui.bootstrap.progressbar","ui.bootstrap.rating","ui.bootstrap.tabs","ui.bootstrap.timepicker","ui.bootstrap.transition","ui.bootstrap.typeahead"]);
@@ -2824,6 +2824,7 @@ angular.module('ui.bootstrap.modal', [])
 
                 templateAndResolvePromise.then(function resolveSuccess(tplAndVars) {
 
+                  modalScope = (modalOptions.scope || $rootScope).$new();
                   modalScope.$close = modalInstance.close;
                   modalScope.$dismiss = modalInstance.dismiss;
 
